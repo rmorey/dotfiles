@@ -6,3 +6,5 @@
 [credential "https://github.com"]
     username = rmorey
 	helper = cache
+[alias]
+	last = log -1 HEAD
