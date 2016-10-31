@@ -17,14 +17,6 @@ export EDITOR=/usr/bin/vim
 # set editing mode to Vi
 bindkey -v
 
-# source lesspipe script, if it exists
-if [[ -f /etc/profile.d/lesspipe.sh ]]; then
-    source /etc/profile.d/lesspipe.sh
-fi
-
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
-
-
 # Various aliases
 alias bc="bc -ql" # launch quitely and with math stuff
 alias diff="diff --color=auto"
@@ -42,3 +34,7 @@ alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-ti
 alias open=xdg-open
 alias -g lc="wc -l"
 alias svim="sudo vim"
+
+if [[ -f ~/.zshlocal ]]; then
+    source ~/.zshlocal
+fi
