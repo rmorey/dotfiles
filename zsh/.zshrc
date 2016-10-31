@@ -41,3 +41,4 @@ alias view="vim -R" # launch vim in readonly mode
 alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde' # this which best which
 alias open=xdg-open
 alias -g lc="wc -l"
+alias svim="sudo vim"

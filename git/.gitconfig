@@ -3,3 +3,6 @@
 	name = Ryan Morey
 [color]
 	ui = auto
+[credential "https://github.com"]
+    username = rmorey
+	helper = cache
