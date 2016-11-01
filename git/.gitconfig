@@ -8,3 +8,5 @@
 	helper = cache
 [alias]
 	last = log -1 HEAD
+[push]
+	default = simple
