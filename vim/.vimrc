@@ -1,3 +1,6 @@
+execute pathogen#infect()
+
+
 " Training away from arrow keys
 noremap <Up> <NOP>
 noremap <Down> <NOP>
@@ -27,7 +30,7 @@ set expandtab
 
 
 " Easy movement in panes
-noremap <c-h> <C-w>h 
+noremap <c-h> <C-w>h
 noremap <c-j> <C-w>j
 noremap <c-k> <C-w>k
 noremap <c-l> <C-w>l
@@ -40,11 +43,14 @@ set splitright
 noremap <LEADER>ws :%s/\s\+$//g<CR><C-o>
 
 " Colors
-set t_co=256
 set background=dark
 colorscheme desert
 syntax on
 
+" filetype detection
+filetype plugin indent on
+
 " tab completion
 set wildmode=longest,list,full
 set wildmenu
+
