@@ -32,6 +32,7 @@ alias emacs="emacs -nw" # launch without X by default
 alias -g fortune="fortune -a" # use all fortunes 
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
+alias la="ls -A"
 alias moo="fortune | cowsay | sm -b black -f white -n 'monospace' -a 1 -" # lol
 alias pacaur="pacaur --color=auto"
 alias pacman="pacman --color=auto"

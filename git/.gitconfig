@@ -8,5 +8,6 @@
 	helper = cache
 [alias]
 	last = log -1 HEAD
+    ignore=!([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
 [push]
 	default = simple
