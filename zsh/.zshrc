@@ -1,5 +1,10 @@
 #!/usr/bin/zsh
 
+source ~/.zsh/antigen.zsh
+
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen apply
+
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.history
@@ -17,8 +22,11 @@ export EDITOR=/usr/bin/vim
 # set editing mode to Vi
 bindkey -v
 
+setopt correct
+
 # Various aliases
 alias bc="bc -ql" # launch quitely and with math stuff
+alias csv="column -t -s','"
 alias diff="diff --color=auto"
 alias emacs="emacs -nw" # launch without X by default
 alias -g fortune="fortune -a" # use all fortunes 
