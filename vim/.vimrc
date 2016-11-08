@@ -63,3 +63,5 @@ filetype plugin indent on
 set wildmode=longest,list,full
 set wildmenu
 
+set title
+set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)\ -\ %{v:servername}

@@ -24,6 +24,12 @@ bindkey -v
 
 setopt correct
 
+case $TERM in
+    xterm*)
+        precmd () {print -Pn "\e]0;%n@%m: %~\a"}
+        ;;
+esac
+
 # Various aliases
 alias bc="bc -ql" # launch quitely and with math stuff
 alias csv="column -t -s','"
