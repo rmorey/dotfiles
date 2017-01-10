@@ -1,4 +1,3 @@
-set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -63,5 +62,12 @@ filetype plugin indent on
 set wildmode=longest,list,full
 set wildmenu
 
+" Set title
 set title
 set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)\ -\ %{v:servername}
+
+function Highlight80()
+    highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+    match OverLength /\%81v.\+/
+endfunction
+
