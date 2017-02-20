@@ -20,7 +20,7 @@ autoload -Uz compinit && compinit
 export EDITOR=/usr/bin/vim
 
 # set editing mode to Vi
-bindkey -v
+bindkey -e
 
 setopt correct
 
@@ -42,6 +42,7 @@ alias grep="grep --color=auto"
 alias la="ls -A"
 alias ls="ls --color=auto"
 alias moo="fortune | cowsay | sm -b black -f white -n 'monospace' -a 1 -" # lol
+alias -g notify="curl -X POST -H \"Content-Type: application/json\" -d '{\"value1\":\"$(hostname)\"}' https://maker.ifttt.com/trigger/task_finished/with/key/O6QpLD7-5iLuEcVMay91m" 
 alias pacaur="pacaur --color=auto"
 alias pacman="pacman --color=auto"
 alias sctl="sudo systemctl" # cause it's a PITA to type
