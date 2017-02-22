@@ -1,0 +1,3 @@
+# Zsh specific aliases
+alias -g fortune="fortune -a" # use all fortunes 
+alias -g lc="wc -l" # line count
