@@ -22,7 +22,6 @@ autoload -Uz compinit && compinit
 # set editing mode to Vi
 bindkey -e
 
-
 # Disable the terminal bell
 xset b off
 
@@ -33,11 +32,6 @@ case $TERM in
         ;;
 esac
 
-# Source aliases
-if [[ -f ~/.aliases ]]; then
-    source ~/.aliases
-fi
-
 if [[ -f ~/.zsh_aliases ]]; then
     source ~/.zsh_aliases
 fi
@@ -46,9 +40,3 @@ fi
 if [[ -f ~/.zsh_local ]]; then
     source ~/.zsh_local
 fi
-
-# Source profile
-if [[ -f ~/.profile ]]; then
-    source ~/.profile
-fi
-
