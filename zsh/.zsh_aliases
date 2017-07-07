@@ -10,7 +10,9 @@ alias ipython="ipython --no-banner"
 alias jctl=journalctl
 alias la="ls -A"
 alias ls="ls --color=auto"
+alias ll="ls -lAh"
 alias moo="fortune | cowsay | sm -b black -f white -n 'monospace' -a 1 -" # lol
+alias open=xdg-open
 alias pacaur="pacaur --color=auto"
 alias pacman="pacman --color=auto"
 alias pdf="libreoffice --headless --invisible --convert-to pdf"

@@ -2,9 +2,14 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
+Plugin 'fatih/vim-go'
+Plugin 'junegunn/fzf.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+" Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 filetype plugin indent on
@@ -36,6 +41,9 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+" Powerline
+set laststatus=2
+set t_Co=256
 
 " Easy movement in panes
 noremap <c-h> <C-w>h
@@ -52,15 +60,15 @@ noremap <LEADER>ws :%s/\s\+$//g<CR><C-o>
 
 " Colors
 set background=dark
-colorscheme desert
+colorscheme koehler
 syntax on
 
 " filetype detection
 filetype plugin indent on
 
 " tab completion
-set wildmode=longest,list,full
-set wildmenu
+" set wildmode=longest,list,full
+" set wildmenu
 
 set ignorecase
 set smartcase " vim so smart
@@ -68,3 +76,5 @@ set smartcase " vim so smart
 set title
 set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:p:h\")})%)%(\ %a%)\ -\ %{v:servername}\ Vim
 let g:ycm_global_ycm_extra_conf = '/usr/share/vim/vimfiles/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
+let g:powerline_pycmd = 'py3'

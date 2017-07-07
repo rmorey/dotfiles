@@ -4,6 +4,7 @@
 if [[ -f ~/.zsh/antigen.zsh ]]; then
     source ~/.zsh/antigen.zsh
     antigen bundle zsh-users/zsh-syntax-highlighting
+    antigen bundle oh-my-zsh/golang
     antigen apply
 fi
 
@@ -41,3 +42,7 @@ fi
 if [[ -f ~/.zsh_local ]]; then
     source ~/.zsh_local
 fi
+
+export EDITOR=/usr/bin/vim
+export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
