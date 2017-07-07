@@ -1,4 +1,5 @@
-zsh/.antigen/.cache
-zsh/.antigen/antigen.log
 vim/.vim/.netrwhist
+vim/.vim/bundle
 *.swp
+*.log
+*.cache
