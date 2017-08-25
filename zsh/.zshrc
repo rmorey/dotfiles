@@ -1,9 +1,15 @@
 #!/usr/bin/zsh
 
 # anitgen stuff 
-if [[ -f ~/.zsh/antigen.zsh ]]; then
-    source ~/.zsh/antigen.zsh
-    antigen bundle zsh-users/zsh-syntax-highlighting
+ANTIGEN=$HOME/antigen
+if [[ -f $ANTIGEN/antigen.zsh ]]; then
+    source $ANTIGEN/antigen.zsh
+    antigen use oh-my-zsh
+    antigen bundle <<EOBUNDLES
+        git
+        zsh-users/zsh-syntax-highlighting
+EOBUNDLES
+    antigen theme robbyrussell
     antigen apply
 fi
 
@@ -12,13 +18,6 @@ fi
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.history
- 
-# use walters prompt
-autoload -Uz promptinit && promptinit
-prompt walters
-
-# enable awesome completion
-autoload -Uz compinit && compinit
 
 # set editing mode to emacs
 bindkey -e
@@ -35,7 +34,7 @@ esac
 
 arccomp=/usr/share/php/arcanist/resources/shell/bash-completion
 if [[ -f $arccomp ]]; then
-    source $arccomp
+    #source $arccomp
 fi 
 
 if type "lesspipe.sh" > /dev/null; then
@@ -44,12 +43,13 @@ if type "lesspipe.sh" > /dev/null; then
 fi
 
 if type "exa" > /dev/null; then
-    alias -g ls=exa
+    alias ls=exa
 fi
 
 # Zsh specific aliases
 alias -g fortune="fortune -a" # use all fortunes 
 alias -g lc="wc -l" # line count
+alias -g L="| less"
 alias android-emu="$HOME/Android/Sdk/emulator/emulator -avd Nexus_5X_API_25_x86"
 alias bc="bc -ql" # launch quitely and with math stuff
 alias cdg="cd \$(git root)"
@@ -60,7 +60,8 @@ alias emacs="emacs -nw" # launch without X by default
 alias grep="grep --color=auto"
 alias ipython="ipython --no-banner"
 alias jctl="sudo journalctl"
-alias moo="fortune | cowsay | sm -b black -f white -n 'monospace' -a 1 -" # lol
+alias ll="ls -l"
+alias la="ls -a"
 alias open=xdg-open
 alias pacaur="pacaur --color=auto"
 alias pacman="pacman --color=auto"
@@ -78,5 +79,5 @@ if [[ -f ~/.zsh_local ]]; then
 fi
 
 export EDITOR=/usr/bin/vim
-export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
+export VISUAL=$EDITOR
+export SRC=$HOME/src
