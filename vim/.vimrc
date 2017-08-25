@@ -1,4 +1,6 @@
 set nocompatible
+
+
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -14,10 +16,6 @@ Plugin 'solarnz/arcanist.vim'
 Plugin 'shougo/neocomplete.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jiangmiao/auto-pairs'
-
-" Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-
-" Plugin 'Valloric/YouCompleteMe'
 
 filetype plugin indent on
 call vundle#end()

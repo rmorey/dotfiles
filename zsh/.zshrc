@@ -1,14 +1,11 @@
 #!/usr/bin/zsh
 
 # anitgen stuff 
-ANTIGEN=$HOME/antigen
-if [[ -f $ANTIGEN/antigen.zsh ]]; then
-    source $ANTIGEN/antigen.zsh
+if [[ -f .zsh/antigen/antigen.zsh ]]; then
+    source .zsh/antigen/antigen.zsh
     antigen use oh-my-zsh
-    antigen bundle <<EOBUNDLES
-        git
-        zsh-users/zsh-syntax-highlighting
-EOBUNDLES
+    antigen bundle git
+    antigen bundle zsh-users/zsh-syntax-highlighting
     antigen theme robbyrussell
     antigen apply
 fi
@@ -50,7 +47,6 @@ fi
 alias -g fortune="fortune -a" # use all fortunes 
 alias -g lc="wc -l" # line count
 alias -g L="| less"
-alias android-emu="$HOME/Android/Sdk/emulator/emulator -avd Nexus_5X_API_25_x86"
 alias bc="bc -ql" # launch quitely and with math stuff
 alias cdg="cd \$(git root)"
 alias csv="column -t -s','"
