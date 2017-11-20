@@ -1,15 +1,15 @@
 #!/usr/bin/zsh
 
 # anitgen stuff 
-if [[ -f .zsh/antigen/antigen.zsh ]]; then
-    source .zsh/antigen/antigen.zsh
+ANTIGEN=$HOME/.zsh/antigen/antigen.zsh
+if [[ -f $ANTIGEN ]]; then
+    source $ANTIGEN
     antigen use oh-my-zsh
     antigen bundle git
     antigen bundle zsh-users/zsh-syntax-highlighting
     antigen theme robbyrussell
     antigen apply
 fi
-
 
 # history stuff
 HISTSIZE=10000
@@ -31,7 +31,7 @@ esac
 
 arccomp=/usr/share/php/arcanist/resources/shell/bash-completion
 if [[ -f $arccomp ]]; then
-    #source $arccomp
+    # source $arccomp
 fi 
 
 if type "lesspipe.sh" > /dev/null; then
@@ -46,7 +46,7 @@ fi
 # Zsh specific aliases
 alias -g fortune="fortune -a" # use all fortunes 
 alias -g lc="wc -l" # line count
-alias -g L="| less"
+alias -g L="| $PAGER"
 alias bc="bc -ql" # launch quitely and with math stuff
 alias cdg="cd \$(git root)"
 alias csv="column -t -s','"
@@ -55,6 +55,7 @@ alias dropbox="dropbox-cli"
 alias emacs="emacs -nw" # launch without X by default
 alias grep="grep --color=auto"
 alias ipython="ipython --no-banner"
+alias ipython2="ipython2 --no-banner"
 alias jctl="sudo journalctl"
 alias ll="ls -l"
 alias la="ls -a"

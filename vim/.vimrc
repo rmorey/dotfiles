@@ -16,6 +16,7 @@ Plugin 'solarnz/arcanist.vim'
 Plugin 'shougo/neocomplete.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'majutsushi/tagbar'
 
 filetype plugin indent on
 call vundle#end()
